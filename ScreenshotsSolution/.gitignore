@@ -1,0 +1,15 @@
+# Ignore Gradle project-specific cache directory
+.gradle
+
+# Ignore Gradle build output directory
+lib/build/
+lib/bin/
+lib/Drivers/
+lib/.classpath
+lib/.project
+lib/.settings
+.project
+.settings
+.classpath
+
+.DS_Store
