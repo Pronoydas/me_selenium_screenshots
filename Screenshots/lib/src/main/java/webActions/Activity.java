@@ -54,6 +54,20 @@ public class Activity {
 		}
 	}
 
+	public static void testFullPageScreenshot(WebDriver driver) {
+		driver.get("https://web-locators-static-site-qa.vercel.app/Screenshot");
+		WebElement AUTButton = driver.findElement(By.xpath("//a[@href='https://www.crio.do/']"));
+		AUTButton.click();
+		Screenshot screenshot = new AShot().shootingStrategy(ShootingStrategies.viewportPasting(1000))
+				.takeScreenshot(driver);
+		try {
+			ImageIO.write(screenshot.getImage(), "PNG", new File("FullPageScreenshot.png"));
+		} catch (IOException e) {
+
+			e.printStackTrace();
+		}
+	}
+
 	public static void snippet_4_1(WebDriver driver) throws InterruptedException {
 		// TODO
 
@@ -70,6 +84,9 @@ public class Activity {
 
 		// Start the browser
 		WebDriver driver = activity.startBrowser();
+
+		// Uncomment for Milestone 3 Activity 1
+		// testFullPageScreenshot(driver);
 
 		// Uncomment for Milestone 4 Activity 1
 		// snippet_4_1(driver);
