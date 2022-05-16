@@ -1,9 +1,15 @@
 package webActions;
 
+import ru.yandex.qatools.ashot.AShot;
+import ru.yandex.qatools.ashot.Screenshot;
+import ru.yandex.qatools.ashot.shooting.ShootingStrategies;
+
 import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.text.ParseException;
+
+import javax.imageio.ImageIO;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
